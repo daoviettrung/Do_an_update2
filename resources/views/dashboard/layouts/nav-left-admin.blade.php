@@ -13,31 +13,49 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a href="member/dashboard"><i class="fa fa-dashboard fa-fw"></i> Manage post</a>
+                <a href="admin/ManagePost/ListPost"><i class="fa fa-dashboard fa-fw"></i> Manage post</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-table fa-fw"></i> Manage Post<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-table fa-fw"></i> Manage Topic<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="member/post/list">My Post</a>
+                        <a href="admin/ManageTopic/view">View Topic</a>
                     </li>
                     <li>
-                        <a href="member/post/add">Add Post</a>
+                        <a href="admin/ManageTopic/getAdd">Add topic</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="member/notice/list"><i class="fa fa-bell-o fa-fw"></i> Notice</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-user fa-fw"></i> Account Settings<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-table fa-fw"></i> Manage Category<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="#">Account Information</a>
+                        <a href="admin/ManageCategory/view">View Category</a>
                     </li>
                     <li>
-                        <a href="#">Security</a>
+                        <a href="admin/ManageCategory/getAdd">Add Categoy</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-table fa-fw"></i> Manage User<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="admin/ManageUser/view">View user</a>
+                    </li>
+                    <li>
+                        <a href="admin/ManageUser/getAdd">Add User</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-table fa-fw"></i> Manage Report<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="admin/ManageReport/view">View report</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->

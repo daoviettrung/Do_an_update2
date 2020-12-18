@@ -23,10 +23,9 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $table = 'users';
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'email', 'password', 'banned_until'
     ];
 
     /**
@@ -39,6 +38,9 @@ class User extends Authenticatable
         'remember_token',
         'two_factor_recovery_codes',
         'two_factor_secret',
+    ];
+    protected $dates = [
+        'banned_until'
     ];
 
     /**
@@ -58,4 +60,20 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function topics()
+    {
+        return $this->hasMany('App\Models\Topic', 'mod_id', 'id');
+    }
+
+    public function posts()
+    {
+        return $this->hasMany('App\Models\Post', 'author_id', 'id');
+    }
+
+
+    public function reports()
+    {
+        return $this->hasMany('App\Models\Report', 'user_id', 'id');
+    }
 }

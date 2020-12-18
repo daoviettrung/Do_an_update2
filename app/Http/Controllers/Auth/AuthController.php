@@ -26,7 +26,7 @@ class AuthController extends Controller
                 $values=$values;
 
             }
-            return $client->listpost($values->id);
+            return $admin->showPost($values->id);
         }
         else{
             return view('auth.login');

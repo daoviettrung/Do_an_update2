@@ -66,18 +66,18 @@
                                                     <thead>
                                                     <tr>
                                                         <th>Name</th>
-                                                        <th>Mod</th>
+                                                        <th>Topic</th>
                                                         <th>Edit</th>
                                                         <th>Delete</th>
                                                     </tr>
                                                     </thead>
                                                     <tbody>
-                                                    @foreach($topic as $t)
+                                                    @foreach($cate as $c)
                                                         <tr>
-                                                            <td>{{$t->name}}</td>
-                                                            <td>{{$t->mod->name}}</td>
+                                                            <td>{{$c->name}}</td>
+                                                            <td>{{$c->topic->name}}</td>
                                                             <td>
-                                                                <a href="admin/ManageTopic/getEdit/{{$t->slug}}">
+                                                                <a href="admin/ManageCategory/getEdit/{{$c->slug}}">
                                                                     <button type="button"
                                                                             class="btn btn-info btn-circle">
                                                                         <i class="fa fa-edit"></i>
@@ -85,11 +85,11 @@
                                                                 </a>
                                                             </td>
                                                             <td>
-                                                                <form method="post" action="admin/ManageTopic/delete/{{$t->slug}}">
+                                                                <form method="post" action="admin/ManageCategory/delete/{{$c->slug}}">
                                                                     @csrf
                                                                     <button type="submit"
                                                                             class="btn btn-danger btn-circle"
-                                                                            onclick="return confirm('If you delete this topic, the categories and posts will also be deleted. If you still want to delete press ok');">
+                                                                            onclick="return confirm('If you delete this category, posts will also be deleted. If you still want to delete click ok ');">
                                                                         <i class="fa fa-trash"></i>
                                                                     </button>
                                                                 </form>

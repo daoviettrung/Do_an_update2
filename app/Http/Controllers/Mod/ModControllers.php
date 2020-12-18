@@ -103,9 +103,6 @@ class ModControllers extends Controller
             $j+=1;
         }
         $postGet=DB::table('tbl_post')->whereIn('category_id',$post)->get();
-        foreach ($postGet as $p){
-            $p=$p;
-        }
         return view('dashboard.pages.mod.ListPost',['post'=>$postGet,'accountLogin'=>$acc]);
     }
 
